@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Entries</title>
+    <link rel="stylesheet" href="./../css/entries_manage.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header-right">
+        <img
+          src="./../assets/image/67da9fddd372b1b5b44ffef41eed6ceb810ddf8a.jpg"
+          alt="User Avatar"
+          class="user-avatar"
+        />
+      </div>
+    </header>
+    <div class="main-container">
+      <div class="sidebar">
+        <nav>
+          <a href="../page/users_manage.html" class="nav-item">
+            <img src="../assets/icon/Users_Group.png" alt="Manage Users" />
+            <span>Manage Users</span>
+          </a>
+
+          <a href="../page/entries_manage.html" class="nav-item active">
+            <img src="../assets/icon/Book.svg" alt="Manage Entries" />
+            <span>Manage Entries</span>
+          </a>
+
+          <a href="../page/article_manage.html" class="nav-item">
+            <img src="../assets/icon/Book_Open.svg" alt="Manage Article" />
+            <span>Manage Article</span>
+          </a>
+
+          <a href="#" class="nav-item logout">
+            <img src="../assets/icon/Log_Out.png" alt="Log out" />
+            <span>Log out</span>
+          </a>
+        </nav>
+      </div>
+
+      <div class="main-content">
+        <div class="top-bar">
+          <div class="search-bar">
+            <input
+              type="text"
+              placeholder="Search Article Categories"
+              id="search-bar"
+            />
+          </div>
+        </div>
+
+        <div class="content">
+          <h2>
+            <span class="folder-icon">📁</span>
+            Manage Categories
+          </h2>
+
+          <div class="add-category">
+            <label for="category-name">Category Name:</label>
+            <input
+              type="text"
+              id="category-name"
+              placeholder="Enter category name"
+            />
+            <button class="add-btn">Add Category</button>
+          </div>
+          <div class="category-list">
+            <h3>📋 Category List</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Category Name</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="tbody">
+                <tr>
+                  <td>1</td>
+                  <td>Technology</td>
+                  <td class="actions">
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Lifestyle</td>
+                  <td class="actions">
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/entries_manage.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>

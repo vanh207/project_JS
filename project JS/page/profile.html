@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile - Rikkei Edu Blog</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../CSS/profile.css" />
+  </head>
+  <body>
+    <div class="profile-container">
+      <div class="profile-header">
+        <a href="../index.html" class="back-btn"
+          ><i class="fa-solid fa-arrow-left"></i> Back to Blog</a
+        >
+        <h2>User Profile</h2>
+      </div>
+
+      <div class="profile-card">
+        <div class="profile-avatar-section">
+          <div class="avatar-wrapper">
+            <img
+              src="./assets/image/67da9fddd372b1b5b44ffef41eed6ceb810ddf8a.jpg"
+              alt="User Avatar"
+              id="profile-img"
+            />
+            <label for="upload-photo" class="upload-badge">
+              <i class="fa-solid fa-camera"></i>
+            </label>
+            <input type="text" id="upload-photo" hidden />
+          </div>
+          <h3>Rikkei User</h3>
+          <p class="user-role">Member since Feb 2025</p>
+        </div>
+
+        <div class="profile-info-section">
+          <div class="info-grid">
+            <div class="info-group">
+              <label>First Name</label>
+              <div class="info-box">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" value="Rikkei" readonly />
+              </div>
+            </div>
+
+            <div class="info-group">
+              <label>Last Name</label>
+              <div class="info-box">
+                <i class="fa-solid fa-user-tag"></i>
+                <input type="text" value="Academy" readonly />
+              </div>
+            </div>
+          </div>
+
+          <div class="info-group full-width">
+            <label>Email Address</label>
+            <div class="info-box">
+              <i class="fa-solid fa-envelope"></i>
+              <input type="email" value="rikkei@gmail.com" readonly />
+            </div>
+          </div>
+
+          <div class="profile-actions">
+            <button class="btn-edit-profile">
+              <i class="fa-solid fa-user-gear"></i> Edit Profile
+            </button>
+            <button class="btn-logout">
+              <i class="fa-solid fa-right-from-bracket"></i> Log Out
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/profile.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>

@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Article</title>
+    <link rel="stylesheet" href="../css/article_manage.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header-right">
+        <img
+          src="./../assets/image/67da9fddd372b1b5b44ffef41eed6ceb810ddf8a.jpg"
+          alt="User Avatar"
+          class="user-avatar"
+        />
+      </div>
+    </header>
+
+    <main class="main-container">
+      <div class="sidebar">
+        <nav>
+          <a href="../page/users_manage.html" class="nav-item">
+            <img src="../assets/icon/Users_Group.png" alt="Manage Users" />
+            <span>Manage Users</span>
+          </a>
+
+          <a href="../page/entries_manage.html" class="nav-item">
+            <img src="../assets/icon/Book.svg" alt="Manage Entries" />
+            <span>Manage Entries</span>
+          </a>
+
+          <a href="../page/article_manage.html" class="nav-item active">
+            <img src="../assets/icon/Book_Open.svg" alt="Manage Article" />
+            <span>Manage Article</span>
+          </a>
+
+          <a href="#" class="nav-item logout">
+            <img src="../assets/icon/Log_Out.png" alt="Log out" />
+            <span>Log out</span>
+          </a>
+        </nav>
+      </div>
+
+      <section class="content">
+        <div class="content-header">
+          <button class="btn-add">Add a new post</button>
+          <h1>Article management</h1>
+        </div>
+
+        <div class="table-card">
+          <table>
+            <thead>
+              <tr>
+                <th>imager</th>
+                <th>Title</th>
+                <th>Entries</th>
+                <th>Content</th>
+                <th>Status</th>
+                <th>Edit status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="tbody">
+              <tr>
+                <td>
+                  <img
+                    src="./../assets/images/Bài viết 1.png"
+                    class="row-thumb"
+                    alt="thumb"
+                  />
+                </td>
+                <td class="bold">Học nấu cá sốt cà chua</td>
+                <td>Nấu ăn</td>
+                <td class="text-muted">Tôi đã học được cách nấu ăn...</td>
+                <td><span class="status-tag public">Public</span></td>
+                <td>
+                  <select class="status-dropdown">
+                    <option>Public</option>
+                    <option>Private</option>
+                  </select>
+                </td>
+                <td>
+                  <div class="action-buttons">
+                    <button class="btn-edit">Sửa</button>
+                    <button class="btn-delete">Xóa</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img
+                    src="./../assets/images/Bài viết 2.png"
+                    class="row-thumb"
+                    alt="thumb"
+                  />
+                </td>
+                <td class="bold">Bí kíp viết CV ngành IT</td>
+                <td>IT</td>
+                <td class="text-muted">Chia sẻ cách viết CV ấn tượng...</td>
+                <td><span class="status-tag private">Private</span></td>
+                <td>
+                  <select class="status-dropdown">
+                    <option>Public</option>
+                    <option>Private</option>
+                  </select>
+                </td>
+                <td>
+                  <div class="action-buttons">
+                    <button class="btn-edit">Sửa</button>
+                    <button class="btn-delete">Xóa</button>
+                  </div>
+                </td>
+              </tr>
+
+              <tr class="no-data" style="display: none">
+                <td colspan="7">
+                  <div class="empty-state">
+                    <p>Chưa có bài viết nào để hiển thị.</p>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="pagination">
+            <button id="previous">
+              <i class="fa-solid fa-chevron-left"></i> Previous
+            </button>
+            <p>Page <strong>1</strong> / 10</p>
+            <button id="next">
+              Next <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+      <div class="modal-overlay" id="modalArticle">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>
+            <i class="fa-solid fa-pen-to-square"></i>
+            <span id="modalTitleText">Add New Article</span>
+          </h3>
+          <button class="close-modal" id="btnCloseModal">&times;</button>
+        </div>
+        <form id="articleForm">
+          <div class="form-group">
+            <label>Title</label>
+            <input
+              type="text"
+              id="input_title"
+              placeholder="Enter article title..."
+              
+            />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Category</label>
+              <select id="category_select" ></select>
+            </div>
+            <div class="form-group">
+              <label>Mood</label>
+              <input
+                type="text"
+                id="input_mood"
+                placeholder="How are you feeling?"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Content</label>
+            <textarea
+              id="input_content"
+              rows="5"
+              placeholder="Write your story..."
+              
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label>Privacy</label>
+            <div class="radio-group">
+              <label
+                ><input type="radio" name="status" value="public" checked />
+                Public</label
+              >
+              <label
+                ><input type="radio" name="status" value="private" />
+                Private</label
+              >
+            </div>
+          </div>
+           <div class="form-group">
+            <label>link imager</label>
+            <input
+              type="text"
+              id="input_imager"
+              placeholder="Enter article imager..."
+            />
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn-save">SAVE ARTICLE</button>
+            <button type="button" class="btn-cancel" id="btnCancelModal">
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    </main>
+    <script src="../js/article_manege.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+  </body>
+</html>

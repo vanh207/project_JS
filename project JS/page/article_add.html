@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rikkei Edu Blog - My Posts</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../CSS/article_add.css" />
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <header class="header">
+        <div class="logo">
+          <i class="fa-solid fa-microchip"></i>
+          <span>RIKKEI_EDU_BLOG</span>
+        </div>
+        <div class="search-bar">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search for your articles..."
+          />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <div class="avatar-container" id="userSection" style="display: none">
+          <button class="avatar-btn" id="avatarBtn">
+            <img
+              src="https://cdn.kona-blue.com/upload/kona-blue_com/post/images/2024/09/18/457/avatar-mac-dinh-12.jpg"
+              alt="User"
+              id="headerAvatar"
+            />
+          </button>
+          <div class="dropdown-menu" id="avatarDropdown">
+            <div class="dropdown-user-info">
+              <div class="avatar-wrapper">
+                <img
+                  src="https://cdn.kona-blue.com/upload/kona-blue_com/post/images/2024/09/18/457/avatar-mac-dinh-12.jpg"
+                  alt="User"
+                  id="dropdownAvatar"
+                />
+                <div class="status-icon"></div>
+              </div>
+              <div class="user-text">
+                <p id="dropdownUserName">Username</p>
+                <span id="dropdownUserEmail">email@gmail.com</span>
+              </div>
+            </div>
+            <div class="menu-links">
+              <button class="viewPrf">View profile</button>
+              <button onclick="location.href = '../index.html'">
+                Home Page
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="auth-buttons" id="authSection">
+          <button class="btn-outline">Sign In</button>
+          <button class="btn-filled">Sign Up</button>
+        </div>
+      </header>
+
+      <section class="container">
+        <div class="section-header">
+          <h1>All My Posts</h1>
+          <button class="btn-add-post" id="btnOpenModal">
+            <i class="fa-solid fa-plus"></i> Add New Post
+          </button>
+        </div>
+
+        <div class="article-grid" id="articleRow"></div>
+
+        <div class="pagination">
+          <button id="previous">
+            <i class="fa-solid fa-chevron-left"></i> Previous
+          </button>
+          <p id="pageInfo">Page <strong>1</strong> / 1</p>
+          <button id="next">
+            Next <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-col about">
+            <h2>MY BLOG</h2>
+            <p class="about-text">
+              <strong>About Rareblocks</strong><br />
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+              dictum aliquet accumsan porta lectus ridiculus in mattis. Netus
+              sodales in volutpat ullamcorper amet adipiscing fermentum.
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Works</a></li>
+              <li><a href="#">Career</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Help</h3>
+            <ul>
+              <li><a href="#">Customer Support</a></li>
+              <li><a href="#">Delivery Details</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="#">Free eBooks</a></li>
+              <li><a href="#">Development Tutorial</a></li>
+              <li><a href="#">How to - Blog</a></li>
+              <li><a href="#">Youtube Playlist</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="divider-line"></div>
+          <div class="bottom-content">
+            <div class="footer-socials">
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <div class="modal-overlay" id="modalArticle">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>
+            <i class="fa-solid fa-pen-to-square"></i>
+            <span id="modalTitleText">Add New Article</span>
+          </h3>
+          <button class="close-modal" id="btnCloseModal">&times;</button>
+        </div>
+        <form id="articleForm">
+          <div class="form-group">
+            <label>Title</label>
+            <input
+              type="text"
+              id="input_title"
+              placeholder="Enter article title..."
+            />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Category</label>
+              <select id="category_select"></select>
+            </div>
+            <div class="form-group">
+              <label>Mood</label>
+              <input
+                type="text"
+                id="input_mood"
+                placeholder="How are you feeling?"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Content</label>
+            <textarea
+              id="input_content"
+              rows="5"
+              placeholder="Write your story..."
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label>Privacy</label>
+            <div class="radio-group">
+              <label
+                ><input type="radio" name="status" value="public" checked />
+                Public</label
+              >
+              <label
+                ><input type="radio" name="status" value="private" />
+                Private</label
+              >
+            </div>
+          </div>
+          <div class="form-group">
+            <label>link imager</label>
+            <input
+              type="text"
+              id="input_imager"
+              placeholder="Enter article imager..."
+            />
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn-save">SAVE ARTICLE</button>
+            <button type="button" class="btn-cancel" id="btnCancelModal">
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/article_add.js"></script>
+  </body>
+</html>

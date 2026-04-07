@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #f1faee; /* Màu nền đồng bộ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.profile-container {
+  width: 100%;
+  max-width: 800px;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-header h2 {
+  color: #1d3557;
+  font-weight: 700;
+}
+
+.back-btn {
+  text-decoration: none;
+  color: #457b9d;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  color: #1d3557;
+  transform: translateX(-5px);
+}
+
+/* Card Profile */
+.profile-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  display: flex;
+  overflow: hidden;
+}
+
+/* Sidebar bên trái (Avatar) */
+.profile-avatar-section {
+  background-color: #457b9d;
+  color: white;
+  padding: 40px;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.avatar-wrapper {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.avatar-wrapper img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid rgba(255, 255, 255, 0.2);
+}
+
+.upload-badge {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background: #198754;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 3px solid #457b9d;
+  transition: 0.3s;
+}
+
+.upload-badge:hover {
+  transform: scale(1.1);
+}
+
+.user-role {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin-top: 5px;
+}
+
+/* Phần thông tin bên phải */
+.profile-info-section {
+  padding: 40px;
+  width: 65%;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.info-group {
+  margin-bottom: 20px;
+}
+
+.full-width {
+  grid-column: span 2;
+}
+
+.info-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #457b9d;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.info-box {
+  display: flex;
+  align-items: center;
+  background: #f8f9fa;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 12px 15px;
+}
+
+.info-box i {
+  color: #adb5bd;
+  margin-right: 12px;
+}
+
+.info-box input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  color: #1d3557;
+  font-size: 1rem;
+  outline: none;
+}
+
+/* Nút bấm */
+.profile-actions {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+}
+
+.btn-edit-profile {
+  flex: 2;
+  background: #1d3557;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-edit-profile:hover {
+  background: #457b9d;
+}
+
+.btn-logout {
+  flex: 1;
+  background: transparent;
+  color: #e63946;
+  border: 1px solid #e63946;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-logout:hover {
+  background: #e63946;
+  color: white;
+}
