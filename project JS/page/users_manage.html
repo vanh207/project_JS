@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Users - Quản lý người dùng</title>
+    <link rel="stylesheet" href="./../css/users_manage.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header-right">
+        <img
+          src="./../assets/image/67da9fddd372b1b5b44ffef41eed6ceb810ddf8a.jpg"
+          alt="User Avatar"
+          class="user-avatar"
+        />
+      </div>
+    </header>
+    <div class="main-container">
+      <div class="sidebar">
+        <nav>
+          <a href="../page/users_manage.html" class="nav-item active">
+            <img src="../assets/icon/Users_Group.png" alt="Manage Users" />
+            <span>Manage Users</span>
+          </a>
+
+          <a href="../page/entries_manage.html" class="nav-item">
+            <img src="../assets/icon/Book.svg" alt="Manage Entries" />
+            <span>Manage Entries</span>
+          </a>
+
+          <a href="../page/article_manage.html" class="nav-item">
+            <img src="../assets/icon/Book_Open.svg" alt="Manage Article" />
+            <span>Manage Article</span>
+          </a>
+
+          <a href="#" class="nav-item logout">
+            <img src="../assets/icon/Log_Out.png" alt="Log out" />
+            <span>Log out</span>
+          </a>
+        </nav>
+      </div>
+      <div class="main">
+        <div class="header">
+          <div>
+            <h2>Team members <span class="user-count">100 users</span></h2>
+          </div>
+        </div>
+
+        <div class="search-container">
+          <input type="text" class="search-box" placeholder="Search user" />
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>
+                Name
+                <button
+                  class="sort"
+                  onclick="sortUser()"
+                  style="cursor: pointer"
+                >
+                  A↓Z
+                </button>
+              </th>
+              <th>Status</th>
+              <th>Email address</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="tbody">
+            <tr>
+              <td>
+                <div class="user-info">
+                  <img
+                    src="./../assets/images/Avatar.png"
+                    class="avatar"
+                    alt="Olivia"
+                  />
+                  <div>
+                    <div class="name">Olivia Rhye</div>
+                    <div class="username">@olivia</div>
+                  </div>
+                </div>
+              </td>
+              <td><span class="status">hoạt động</span></td>
+              <td><a href="#" class="email">olivia@untitledul.com</a></td>
+              <td class="actions">
+                <button class="btn btn-block">block</button>
+                <button class="btn btn-unblock">unblock</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="user-info">
+                  <img
+                    src="./../assets/images/Avatar (1).png"
+                    class="avatar"
+                    alt="Phoenix"
+                  />
+                  <div>
+                    <div class="name">Phoenix Baker</div>
+                    <div class="username">@phoenix</div>
+                  </div>
+                </div>
+              </td>
+              <td><span class="status">hoạt động</span></td>
+              <td><a href="#" class="email">phoenix@untitledul.com</a></td>
+              <td class="actions">
+                <button class="btn btn-block">block</button>
+                <button class="btn btn-unblock">unblock</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="user-info">
+                  <img
+                    src="./../assets/images/Avatar (2).png"
+                    class="avatar"
+                    alt="Lana"
+                  />
+                  <div>
+                    <div class="name">Lana Steiner</div>
+                    <div class="username">@lana</div>
+                  </div>
+                </div>
+              </td>
+              <td><span class="status">hoạt động</span></td>
+              <td><a href="#" class="email">lana@untitledul.com</a></td>
+              <td class="actions">
+                <button class="btn btn-block">block</button>
+                <button class="btn btn-unblock">unblock</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="user-info">
+                  <img
+                    src="./../assets/images/Avatar (3).png"
+                    class="avatar"
+                    alt="Demi"
+                  />
+                  <div>
+                    <div class="name">Demi Wilkinson</div>
+                    <div class="username">@demi</div>
+                  </div>
+                </div>
+              </td>
+              <td><span class="status">hoạt động</span></td>
+              <td><a href="#" class="email">demi@untitledul.com</a></td>
+              <td class="actions">
+                <button class="btn btn-block">block</button>
+                <button class="btn btn-unblock">unblock</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="user-info">
+                  <img
+                    src="./../assets/images/Avatar (4).png"
+                    class="avatar"
+                    alt="Candice"
+                  />
+                  <div>
+                    <div class="name">Candice Wu</div>
+                    <div class="username">@candice</div>
+                  </div>
+                </div>
+              </td>
+              <td><span class="status">hoạt động</span></td>
+              <td><a href="#" class="email">candice@untitledul.com</a></td>
+              <td class="actions">
+                <button class="btn btn-block">block</button>
+                <button class="btn btn-unblock">unblock</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="user-info">
+                  <img
+                    src="./../assets/images/Avatar (5).png"
+                    class="avatar"
+                    alt="Natali"
+                  />
+                  <div>
+                    <div class="name">Natali Craig</div>
+                    <div class="username">@natali</div>
+                  </div>
+                </div>
+              </td>
+              <td><span class="status">hoạt động</span></td>
+              <td><a href="#" class="email">natali@untitledul.com</a></td>
+              <td class="actions">
+                <button class="btn btn-block">block</button>
+                <button class="btn btn-unblock">unblock</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="user-info">
+                  <img
+                    src="./../assets/images/Avatar (6).png"
+                    class="avatar"
+                    alt="Drew"
+                  />
+                  <div>
+                    <div class="name">Drew Cano</div>
+                    <div class="username">@drew</div>
+                  </div>
+                </div>
+              </td>
+              <td><span class="status">hoạt động</span></td>
+              <td><a href="#" class="email">drew@untitledul.com</a></td>
+              <td class="actions">
+                <button class="btn btn-block">block</button>
+                <button class="btn btn-unblock">unblock</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="user-info">
+                  <img
+                    src="./../assets/images/Avatar (7).png"
+                    class="avatar"
+                    alt="Orlando"
+                  />
+                  <div>
+                    <div class="name">Orlando Diggs</div>
+                    <div class="username">@orlando</div>
+                  </div>
+                </div>
+              </td>
+              <td><span class="status">hoạt động</span></td>
+              <td><a href="#" class="email">orlando@untitledul.com</a></td>
+              <td class="actions">
+                <button class="btn btn-block">block</button>
+                <button class="btn btn-unblock">unblock</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="user-info">
+                  <img
+                    src="./../assets/images/Avatar (8).png"
+                    class="avatar"
+                    alt="Andi"
+                  />
+                  <div>
+                    <div class="name">Andi Lane</div>
+                    <div class="username">@andi</div>
+                  </div>
+                </div>
+              </td>
+              <td><span class="status">hoạt động</span></td>
+              <td><a href="#" class="email">andi@untitledul.com</a></td>
+              <td class="actions">
+                <button class="btn btn-block">block</button>
+                <button class="btn btn-unblock">unblock</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="user-info">
+                  <img
+                    src="./../assets/images/Avatar (9).png"
+                    class="avatar"
+                    alt="Kate"
+                  />
+                  <div>
+                    <div class="name">Kate Morrison</div>
+                    <div class="username">@kate</div>
+                  </div>
+                </div>
+              </td>
+              <td><span class="status">hoạt động</span></td>
+              <td><a href="#" class="email">kate@untitledul.com</a></td>
+              <td class="actions">
+                <button class="btn btn-block">block</button>
+                <button class="btn btn-unblock">unblock</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="pagination">
+          <button id="previous">
+            <i class="fa-solid fa-chevron-left"></i> Previous
+          </button>
+          <p>Page <strong>1</strong> / 10</p>
+          <button id="next">
+            Next <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="../js/users_manage.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>

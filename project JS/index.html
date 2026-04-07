@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rikkei Edu Blog - Nhật ký cá nhân</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../CSS/style.css" />
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <header class="header">
+        <div class="logo">
+          <i class="fa-solid fa-microchip"></i>
+          <span>RIKKEI_EDU_BLOG</span>
+        </div>
+        <div class="search-bar">
+          <input type="text" placeholder="search for articles..." />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="avatar">
+          <button id="avatar-btn">
+            <img
+              id="headerAvatar"
+              src="https://cdn.kona-blue.com/upload/kona-blue_com/post/images/2024/09/18/457/avatar-mac-dinh-12.jpg"
+              alt="User"
+            />
+          </button>
+          <div class="dropdow">
+            <div class="avatar-dropdow">
+              <img
+                id="dropdownAvatar"
+                src="https://cdn.kona-blue.com/upload/kona-blue_com/post/images/2024/09/18/457/avatar-mac-dinh-12.jpg"
+                alt="User"
+              />
+              <div class="status-icon"></div>
+              <div class="text-avatar-dropdow">
+                <p id="dropdownUserName">Rikkei</p>
+                <span id="dropdownUserEmail">rikkei@gmail.com</span>
+              </div>
+            </div>
+            <div class="menu-dropdow">
+              <button class="viewPrf">View profile</button>
+              <button class="myPosst">All my posts</button>
+              <button class="logOut">Log out</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="auth-buttons">
+          <button id="signIn" class="btn-outline">Sign In</button>
+          <button id="signUp" class="btn-filled">Sign Up</button>
+        </div>
+      </header>
+      <section class="banner">
+        <div class="banner-content">
+          <h2>Welcome to Rikkei Edu Blog</h2>
+          <p>
+            A place to preserve memories, share knowledge, and connect the
+            academic community.
+          </p>
+          <button class="btn-primary">
+            Discover now
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </section>
+      <div class="divider"></div>
+      <section class="container">
+        <div class="section-title">
+          <h1>Recent Blog Posts</h1>
+        </div>
+        <div class="section-container">
+          <div class="section-blog">
+            <div class="section-blog-card">
+              <div class="imager-section-blog">
+                <img src="./assets/image/Image.svg" alt="Work" />
+              </div>
+              <div class="card-body">
+                <p class="text-date">
+                  <i class="fa-regular fa-calendar"></i> 25-02-2025
+                </p>
+                <div class="heading">
+                  <button><h3>A Productive Day at Work</h3></button>
+                </div>
+                <p class="text-content">
+                  Today was a really productive day at work. I managed to finish
+                  a report ahead of schedule and received positive feedback from
+                  my manager.
+                </p>
+                <div class="categories">
+                  <span class="badge">Daily Journal</span>
+                  <button class="btn-edit">Edit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section-colum">
+            <div class="section-colum-card">
+              <div class="imager-section-colum">
+                <img src="./assets/image/Image.svg" alt="Work" />
+              </div>
+              <div class="card-body">
+                <p class="text-date">
+                  <i class="fa-regular fa-calendar"></i> 25-02-2025
+                </p>
+                <div class="heading">
+                  <button><h3>A Productive Day at Work</h3></button>
+                </div>
+                <p class="text-content">
+                  Today was a really productive day at work. I managed to finish
+                  a report ahead of schedule and received positive feedback from
+                  my manager.
+                </p>
+                <div class="categories">
+                  <span class="badge">Daily Journal</span>
+                  <button class="btn-edit">Edit</button>
+                </div>
+              </div>
+            </div>
+            <div class="section-colum-card">
+              <div class="imager-section-colum">
+                <img src="./assets/image/Image.svg" alt="Work" />
+              </div>
+              <div class="card-body">
+                <p class="text-date">
+                  <i class="fa-regular fa-calendar"></i> 25-02-2025
+                </p>
+                <div class="heading">
+                  <button><h3>A Productive Day at Work</h3></button>
+                </div>
+                <p class="text-content">
+                  Today was a really productive day at work. I managed to finish
+                  a report ahead of schedule and received positive feedback from
+                  my manager.
+                </p>
+                <div class="categories">
+                  <span class="badge">Daily Journal</span>
+                  <button class="btn-edit">Edit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="container">
+        <div class="section-title">
+          <h1>List Of Articles</h1>
+        </div>
+        <div class="filter-topics">
+          <button>Daily Journal</button>
+          <button>Work & Career</button>
+          <button>Personal Thoughts</button>
+          <button>Emotions & Feelings</button>
+        </div>
+        <div class="content">
+          <div class="row" id="articleRow">
+            <div class="card">
+              <div class="imager">
+                <img src="./assets/image/Image.svg" alt="Work" />
+              </div>
+              <div class="card-body">
+                <p class="text-date">
+                  <i class="fa-regular fa-calendar"></i> 25-02-2025
+                </p>
+                <div class="heading">
+                  <button><h3>A Productive Day at Work</h3></button>
+                </div>
+                <p class="text-content">
+                  Today was a really productive day at work. I managed to finish
+                  a report ahead of schedule and received positive feedback from
+                  my manager.
+                </p>
+                <div class="categories">
+                  <span class="badge">Daily Journal</span>
+                  <button class="btn-edit">Edit</button>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="imager">
+                <img src="./assets/image/Image.svg" alt="Work" />
+              </div>
+              <div class="card-body">
+                <p class="text-date">
+                  <i class="fa-regular fa-calendar"></i> 25-02-2025
+                </p>
+                <div class="heading">
+                  <button><h3>A Productive Day at Work</h3></button>
+                </div>
+                <p class="text-content">
+                  Today was a really productive day at work. I managed to finish
+                  a report ahead of schedule and received positive feedback from
+                  my manager.
+                </p>
+                <div class="categories">
+                  <span class="badge">Daily Journal</span>
+                  <button class="btn-edit">Edit</button>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="imager">
+                <img src="./assets/image/Image.svg" alt="Work" />
+              </div>
+              <div class="card-body">
+                <p class="text-date">
+                  <i class="fa-regular fa-calendar"></i> 25-02-2025
+                </p>
+                <div class="heading">
+                  <button><h3>A Productive Day at Work</h3></button>
+                </div>
+                <p class="text-content">
+                  Today was a really productive day at work. I managed to finish
+                  a report ahead of schedule and received positive feedback from
+                  my manager.
+                </p>
+                <div class="categories">
+                  <span class="badge">Daily Journal</span>
+                  <button class="btn-edit">Edit</button>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="imager">
+                <img src="./assets/image/Image.svg" alt="Work" />
+              </div>
+              <div class="card-body">
+                <p class="text-date">
+                  <i class="fa-regular fa-calendar"></i> 25-02-2025
+                </p>
+                <div class="heading">
+                  <button><h3>A Productive Day at Work</h3></button>
+                </div>
+                <p class="text-content">
+                  Today was a really productive day at work. I managed to finish
+                  a report ahead of schedule and received positive feedback from
+                  my manager.
+                </p>
+                <div class="categories">
+                  <span class="badge">Daily Journal</span>
+                  <button class="btn-edit">Edit</button>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="imager">
+                <img src="./assets/image/Image.svg" alt="Work" />
+              </div>
+              <div class="card-body">
+                <p class="text-date">
+                  <i class="fa-regular fa-calendar"></i> 25-02-2025
+                </p>
+                <div class="heading">
+                  <button><h3>A Productive Day at Work</h3></button>
+                </div>
+                <p class="text-content">
+                  Today was a really productive day at work. I managed to finish
+                  a report ahead of schedule and received positive feedback from
+                  my manager.
+                </p>
+                <div class="categories">
+                  <span class="badge">Daily Journal</span>
+                  <button class="btn-edit">Edit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pagination">
+          <button id="previous">
+            <i class="fa-solid fa-chevron-left"></i> Previous
+          </button>
+          <p>Page <strong>1</strong> / 10</p>
+          <button id="next">
+            Next <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-col about">
+            <h2>MY BLOG</h2>
+            <p class="about-text">
+              <strong>About Rareblocks</strong><br />
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+              dictum aliquet accumsan porta lectus ridiculus in mattis. Netus
+              sodales in volutpat ullamcorper amet adipiscing fermentum.
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Works</a></li>
+              <li><a href="#">Career</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Help</h3>
+            <ul>
+              <li><a href="#">Customer Support</a></li>
+              <li><a href="#">Delivery Details</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="#">Free eBooks</a></li>
+              <li><a href="#">Development Tutorial</a></li>
+              <li><a href="#">How to - Blog</a></li>
+              <li><a href="#">Youtube Playlist</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="divider-line"></div>
+          <div class="bottom-content">
+            <div class="footer-socials">
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <div id="articleModal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-body">
+          <h2 id="modalTitle"></h2>
+          <div class="modal-meta">
+            <span class="badge" id="modalCategory"></span>
+            <span id="modalDate"></span>
+          </div>
+          <div class="modal-image"><img id="modalImg" src="" /></div>
+          <p id="modalText"></p>
+
+          <hr />
+          <div class="comment-section">
+            <h3>Comments</h3>
+            <div id="commentList"></div>
+            <div class="comment-input" id="commentInputSection">
+              <textarea
+                id="commentContent"
+                placeholder="Write a comment..."
+              ></textarea>
+              <button id="btnSubmitComment">Post Comment</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>

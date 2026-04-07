@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đổi Mật Khẩu - Rikkei Edu</title>
+    <link rel="stylesheet" href="../css/passwork.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="auth-card">
+            <h2 class="page-title">Đổi mật khẩu</h2>
+            <form id="changePasswordForm">
+                <div class="form-group">
+                    <label>Mật khẩu hiện tại</label>
+                    <input type="password" id="oldPassword" required placeholder="Nhập mật khẩu cũ">
+                </div>
+                
+                <div class="form-group">
+                    <label>Mật khẩu mới</label>
+                    <input type="password" id="newPassword" required placeholder="Nhập mật khẩu mới">
+                </div>
+
+                <div class="form-group">
+                    <label>Xác nhận mật khẩu mới</label>
+                    <input type="password" id="confirmPassword" required placeholder="Nhập lại mật khẩu mới">
+                </div>
+
+                <button type="submit" class="btn-submit">Cập nhật mật khẩu</button>
+            </form>
+            <p id="message" class="error-msg"></p>
+        </div>
+    </div>
+
+    <script src="../js/passwork.js"></script>
+</body>
+</html>
