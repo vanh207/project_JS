@@ -27,7 +27,6 @@ let editId = null;
 // --- 3. HÀM RENDER DỮ LIỆU ---
 const renderArticles = () => {
   // Lọc bài viết (Hiển thị tất cả nếu là admin, hoặc lọc theo userId nếu cần)
-  // Dựa vào ảnh Local Storage của bạn, ta sẽ hiển thị tất cả bài viết hiện có
   const filtered = allArticles;
 
   const totalPages = Math.ceil(filtered.length / itemsPerPage) || 1;
