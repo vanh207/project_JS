@@ -10,7 +10,7 @@ if (!currentUser) {
   window.location.href = "login.html";
 }
 
-// --- 2. TRUY VẤN ELEMENTS (Khớp chính xác với HTML của bạn) ---
+// --- 2. TRUY VẤN ELEMENTS ---
 const tbody = document.getElementById("tbody");
 const modal = document.getElementById("modalArticle");
 const articleForm = document.getElementById("articleForm");
